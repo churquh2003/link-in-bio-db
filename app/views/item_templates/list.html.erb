@@ -2,9 +2,11 @@
 
 <div class="links">
   <% @items.each do |item| %>
-    <div class="link-item">
-      <img src="<%= item.thumbnail_url %>" alt="Thumbnail for <%= item.link_description %>" style="width: 50px; height: 50px;">
-      <a href="<%= item.link_url %>" target="_blank"><%= item.link_description %></a>
+    <div class="link-item" style="margin: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+      <img src="<%= item.thumbnail_url %>" alt="Thumbnail for <%= item.link_description %>" style="width: 50px; height: 50px; margin-right: 10px;">
+      <a href="<%= item.link_url %>" target="_blank" style="font-weight: bold; text-decoration: none; color: #333;">
+        <%= item.link_description %>
+      </a>
     </div>
   <% end %>
 </div>

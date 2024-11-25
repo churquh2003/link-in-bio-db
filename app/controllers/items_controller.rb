@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.all # Fetch all items from the database
-    render({ template: "item_templates/list" }) # Render the list view
+    @items = Item.all # Fetch all records from the items table
+    render({ template: "item_templates/list" }) # Render the view
   end
 end
 
