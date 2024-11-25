@@ -1,37 +1,26 @@
 <div class="main-container">
+  <!-- Profile Picture -->
   <div class="image-row">
-    <img src="/profile-pic.jpg" alt="Charlotte Urquhart headshot" class="avatar-image">
+    <img src="/profile-pic.jpg" alt="Charlotte Urquhart's Profile Picture" class="avatar-image">
   </div>
 
+  <!-- Name -->
   <div class="name-row">
     Charlotte Urquhart
   </div>
 
-  <div class="social-icons-row">
-    <a href="https://github.com/churquh2003" target="_blank">
-      <i class="fa-brands fa-github"></i>
-    </a>
-
-    <a href="https://www.linkedin.com/in/charlotte-urquhart/" target="_blank">
-      <i class="fa-brands fa-linkedin"></i>
-    </a>
-
-    <a href="https://charlotteurquhartphotography.my.canva.site" target="_blank">
-      <i class="fa-brands fa-camera-retro"></i>
-    </a>
-  </div>
-
+  <!-- Links dynamically rendered from the database -->
   <div class="links-row">
-    <% @items.each do |the_item| %>
+    <% @list_of_items.each do |the_item| %>
       <div class="item">
+        <!-- Thumbnail from the database -->
         <img src="<%= the_item.thumbnail_url %>" class="thumbnail">
 
+        <!-- Link description and URL -->
         <a class="link-text" target="_blank" href="<%= the_item.link_url %>">
           <%= the_item.link_description %>
         </a>
       </div>
     <% end %>
   </div>
-  <!-- links-row -->
 </div>
-<!-- main-container -->
