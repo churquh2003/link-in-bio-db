@@ -1,8 +1,11 @@
+<h1>Charlotte's Dynamic Link-in-Bio</h1>
+
 <div class="links">
   <% @items.each do |item| %>
     <div class="link-item">
-      <img src="<%= item.thumbnail_url %>" alt="Thumbnail" style="width: 50px; height: 50px;">
+      <img src="<%= item.thumbnail_url %>" alt="Thumbnail for <%= item.link_description %>" style="width: 50px; height: 50px;">
       <a href="<%= item.link_url %>" target="_blank"><%= item.link_description %></a>
     </div>
   <% end %>
 </div>
+
