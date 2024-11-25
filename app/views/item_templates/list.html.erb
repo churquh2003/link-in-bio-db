@@ -1,13 +1,38 @@
-<h1>Charlotte's Dynamic Link-in-Bio</h1>
+<div class="main-container">
+  <div class="image-row">
+    <img src="/assets/Profilephoto.jpg" alt="Charlotte Urquhart headshot" class="avatar-image">
+  </div>
 
-<div class="links">
-  <% @items.each do |item| %>
-    <div class="link-item" style="margin: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
-      <img src="<%= item.thumbnail_url %>" alt="Thumbnail for <%= item.link_description %>" style="width: 50px; height: 50px; margin-right: 10px;">
-      <a href="<%= item.link_url %>" target="_blank" style="font-weight: bold; text-decoration: none; color: #333;">
-        <%= item.link_description %>
-      </a>
-    </div>
-  <% end %>
+  <div class="name-row">
+    Charlotte Urquhart
+  </div>
+
+  <div class="social-icons-row">
+    <a href="https://github.com/churquh2003" target="_blank">
+      <i class="fa-brands fa-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/charlotte-urquhart/" target="_blank">
+      <i class="fa-brands fa-linkedin"></i>
+    </a>
+
+    <a href="https://charlotteurquhartphotography.my.canva.site" target="_blank">
+      <i class="fa-brands fa-camera-retro"></i>
+    </a>
+  </div>
+
+  <div class="links-row">
+    <% @items.each do |the_item| %>
+      <div class="item">
+        <img src="<%= the_item.thumbnail_url %>" class="thumbnail">
+
+        <a class="link-text" target="_blank" href="<%= the_item.link_url %>">
+          <%= the_item.link_description %>
+        </a>
+      </div>
+    <% end %>
+  </div>
+  <!-- links-row -->
 </div>
+<!-- main-container -->
 
