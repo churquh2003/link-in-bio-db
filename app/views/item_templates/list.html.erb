@@ -1,29 +1,8 @@
-<h1>Charlotte Urquhart’s Link-in-Bio</h1>
-
-<div class="links-row">
-  <div class="item">
-    <img src="https://picsum.photos/200" alt="My Personal Website Thumbnail" class="thumbnail">
-    <a href="https://charlotteurquhart.com" target="_blank" class="link-text">
-      My Personal Website
-    </a>
-  </div>
-  <div class="item">
-    <img src="https://picsum.photos/200" alt="Linkedin Thumbnail" class="thumbnail">
-    <a href="https://www.linkedin.com/in/charlotte-urquhart" target="_blank" class="link-text">
-      Linkedin
-    </a>
-  </div>
-  <div class="item">
-    <img src="https://picsum.photos/200" alt="Photography Portfolio Thumbnail" class="thumbnail">
-    <a href="https://charlotteurquhartphotography.my.canva.site" target="_blank" class="link-text">
-      Photography Portfolio
-    </a>
-  </div>
-  <div class="item">
-    <img src="https://picsum.photos/200" alt="Github Thumbnail" class="thumbnail">
-    <a href="https://github.com/churquh2003" target="_blank" class="link-text">
-      Github
-    </a>
-  </div>
+<div class="links">
+  <% @items.each do |item| %>
+    <div class="link-item">
+      <img src="<%= item.thumbnail_url %>" alt="Thumbnail" style="width: 50px; height: 50px;">
+      <a href="<%= item.link_url %>" target="_blank"><%= item.link_description %></a>
+    </div>
+  <% end %>
 </div>
-

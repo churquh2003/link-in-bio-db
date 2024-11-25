@@ -1,16 +1,38 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Link-in-bio</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #333;
+  }
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  .links {
+    margin-top: 20px;
+  }
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+  .link-item {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: inline-block;
+    width: 300px;
+    background: #fff;
+  }
+
+  .link-item img {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  .link-item a {
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .link-item a:hover {
+    text-decoration: underline;
+  }
+</style>
+
