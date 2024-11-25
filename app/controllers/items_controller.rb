@@ -1,7 +1,10 @@
 class ItemsController < ApplicationController
   def index
-    @list_of_items = Item.all.order({ :created_at => :asc })
+    # Fetch all items from the database
+    @list_of_items = Item.all.order(:created_at)
 
-    render({ :template => "item_templates/list" })
+    # Render the list view
+    render({ template: "item_templates/list" })
   end
 end
+
